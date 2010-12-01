@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <style>
+        </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script>
+$(function(){
+  loadImg();
+  setInterval(loadImg , 10000);
+});
+
+function loadImg() {
+  $("#webcam").attr("src", "http://www.fmharo.co.jp/up-on-camera/cam1.jpg?" + Date());
+}
+
+</script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <img id="webcam">
+
+            </td>
+            <td>
+                <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: '#radioh OR #fmharo',
+  interval: 6000,
+  title: 'えっちほー',
+  subject: 'FmHaroへのつぶやき',
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#8ec1da',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'all'
+  }
+}).render().start();
+</script>
+
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>
